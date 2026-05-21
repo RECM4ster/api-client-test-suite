@@ -54,26 +54,49 @@ GOREST_TOKEN=your_token_here
 ### Unit tests
 
 ```bash
-pytest tests/unit -v
+make test-unit
 ```
 
 ### Integration tests
 
 ```bash
-pytest tests/integration -v
+make test-integration
 ```
 
 ## Linting
 
 ```bash
-ruff check .
+make lint
 ```
 
 ## Type checking
 
 ```bash
+make typecheck
+```
+
+## Full Validation
+
+Runs:
+- linting,
+- static type checking,
+- unit tests.
+
+```bash
+make check
+```
+
+## Windows Without GNU Make
+
+Windows users without GNU Make can run the commands directly:
+
+```powershell
+pytest tests/unit -v
+pytest tests/integration -v
+ruff check .
 mypy --strict src
 ```
+
 
 ## Notes
 
