@@ -28,6 +28,9 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+markers = [
+    "integration: tests hitting the real API"
+]
 
 [tool.ruff]
 line-length = 100
